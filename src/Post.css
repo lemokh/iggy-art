@@ -1,0 +1,45 @@
+@import 'https://fonts.googleapis.com/css?family=Abhaya+Libre';
+
+.Post-head-block {
+  height: 60px;
+  background-color: white;
+}
+
+.Post-nav-block {
+  height: 40px;
+  background-color: #444;
+}
+
+.Post-thumbnail {
+  width: 90%;
+  max-width: 700px;
+  background-color: white;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 50px;
+  padding-bottom: 30px;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.Post__text {
+  height: auto;
+  font-family: 'Abhaya Libre', serif;
+  padding:0 10px;
+}
+
+.Post__title {
+  padding-top: 10px;
+  font-size: 40px;
+  font-weight: 400;
+  color: #222;
+}
+
+.Post__pic {
+  width: 90%;
+}
+
+.Post__description {
+  font-size: 25px;
+  color:#345;
+}

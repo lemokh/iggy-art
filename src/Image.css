@@ -5,9 +5,14 @@ ul {
   padding: 0;
 }
 
+a {
+  text-decoration: none;
+}
+
 .thumbnail {
   background-color: white;
-  width:600px;
+  width: 90%;
+  max-width: 600px;
   height: auto;
   padding-top: 50px;
   margin-left: auto;
@@ -18,7 +23,7 @@ ul {
 }
 
 .article__pic {
-  width: 500px;
+  width: 90%;
 }
 
 .article__title {
@@ -26,5 +31,5 @@ ul {
   font-family: 'Abhaya Libre', serif;
   font-weight: 400;
   color: #222;
-  padding: 0;
+  padding: 0 10px;
 }

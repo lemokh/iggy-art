@@ -1,16 +1,14 @@
 import React, { Component } from 'react';
 import Image from './Image';
 
-class ImageList extends Component {
+export default class ImageList extends Component {
 
   render() {
     return (<ul>{
       this.props.articles.map((article,id) => {
-        return <Image key={id} title={article.title} src={article.src} />;
+        return <Image key={id} title={article.title} src={article.src} id={id} />;
       })
     }</ul>);
   }
 
 }
-
-export default ImageList;

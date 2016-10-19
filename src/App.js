@@ -3,7 +3,7 @@ import './App.css';
 import jumbo from './panda-head.jpg';
 import ImageList from './ImageList';
 
-const articles = [
+export const articles = [
   {
     "title": "I Personify Mother Nature In My Pencil Drawings",
     "src": "https://github.com/lightofdavinci/photo/blob/master/panda1.jpg?raw=true",
@@ -48,10 +48,20 @@ const articles = [
     "title": "Rare Salvador Dali’s Surrealist Cookbook Is Being Re-Released For The First Time In Over 40 Years",
     "src": "https://github.com/lightofdavinci/photo/blob/master/panda9.jpg?raw=true",
     "description": "When we think of Salvador Dali, we usually think of melting clocks and surrealist paintings. But the famously flamboyant artist was also something of a culinary connoisseur, and in 1973 he even released his own cookbook called Les Diners de Gala."
+  },
+  {
+    "title": "This LEGO Bag Turns Your Hand Into LEGO",
+    "src": "https://github.com/lightofdavinci/photo/blob/master/panda10.jpg?raw=true",
+    "description": "Recently we brought you a bicycle helmet that makes you look like a real life LEGO figure. Well, now you can add to your collection of LEGO-themed accessories with this awesome bag that turns your hand into a LEGO hand!"
+  },
+  {
+    "title": "‘Porca Miseria’ By Ingo Maurer",
+    "src": "https://github.com/lightofdavinci/photo/blob/master/panda11.jpg?raw=true",
+    "description": "Ingo Maurer is a master of lamp-making. Porca Miseria chandelier is one of his best works. This design was custom made for a customer who had a sterile atmosphere in his kitchen."
   }
 ];
 
-class App extends Component {
+export default class App extends Component {
   render() {
     return (
       <div className="App">
@@ -61,11 +71,16 @@ class App extends Component {
         <div className="App-main-nav"></div>
         <div className="App-nav"></div>
         <ImageList articles={articles} />
-        <div className="App-social-buttons"></div>
+        <div className="App-social-buttons">
+          <ul className="social__nav">
+            <li><a href="https://www.facebook.com/dan.volosnikov"><i className="fa fa-facebook fa-lg"></i></a></li>
+            <li><a href="http://codepen.io/Volosnikov/"><i className="fa fa-codepen fa-lg"></i></a></li>
+            <li><a href="https://github.com/lightofdavinci"><i className="fa fa-github fa-lg"></i></a></li>
+            <li><a href="https://vk.com/danymccoyvolosnikov"><i className="fa fa-vk fa-lg"></i></a></li>
+          </ul>
+        </div>
         <div className="App-footer"></div>
       </div>
     );
   }
 }
-
-export default App;
