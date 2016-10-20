@@ -17,32 +17,6 @@
   background-color: #444;
 }
 
-.App-social-buttons {
-  height: 70px;
-  background-color: #001;
-}
-
-.social__nav {
-  list-style-type: none;
-  padding: 0;
-}
-
-.social__nav li {
-  display: inline-block;
-  margin-top: 10px;
-  padding: 10px;
-  font-size: 15px;
-  background-color: #fff;
-  margin-left: 6px;
-  margin-right: 6px;
-  width: 20px;
-  border-radius: 4px;
-}
-
-.social__nav i {
-  color: #001;
-}
-
 .App-footer {
   height: 90px;
   background-color: #111;
