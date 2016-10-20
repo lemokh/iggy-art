@@ -1,6 +1,6 @@
 import React from 'react';
 import NoMatch from './NoMatch';
-import { articles } from './App';
+import { articles } from './articles';
 import './Post.css';
 
 export default (props) => {
