@@ -55,8 +55,28 @@ export const articles = [
     "description": "Ingo Maurer is a master of lamp-making. Porca Miseria chandelier is one of his best works. This design was custom made for a customer who had a sterile atmosphere in his kitchen."
   },
   {
-    "title":"Japanese Artist Tightly Rolls Newspaper To Create Incredibly Realistic Animal Sculptures",
-    "src":"https://github.com/lightofdavinci/photo/blob/master/panda12.jpg?raw=true",
-    "description":"For most us, newspapers are for reading. But for Chie Hitotsuyama, newspapers serve a whole different purpose. Because as you can see below, the Japanese artist doesn’t use them to catch up on the sport and gossip. She turns them into incredibly realistic animal sculptures instead."    
+    "title": "Japanese Artist Tightly Rolls Newspaper To Create Incredibly Realistic Animal Sculptures",
+    "src": "https://github.com/lightofdavinci/photo/blob/master/panda12.jpg?raw=true",
+    "description": "For most us, newspapers are for reading. But for Chie Hitotsuyama, newspapers serve a whole different purpose. Because as you can see below, the Japanese artist doesn’t use them to catch up on the sport and gossip. She turns them into incredibly realistic animal sculptures instead."
+  },
+  {
+    "title": "This Iceberg’s Shadows Divide The World Into 4 Perfect Quadrants",
+    "src": "https://github.com/lightofdavinci/photo/blob/master/panda13.jpg?raw=true",
+    "description": "This amazing shot of an iceberg is from Canadian photographer David Burdeny‘s project “NORTH/SOUTH”. It was taken with Phase One equipment in the Weddel sea, Antarctica. Burdeny called the image “Mercators Projection”, which highlights its beautiful symmetry."
+  },
+  {
+    "title": "Old Books Turned Into Fairytale Sculptures By Su Blackwell",
+    "src": "https://github.com/lightofdavinci/photo/blob/master/panda14.jpg?raw=true",
+    "description": "Su Blackwell is an English artist who creates fairytale-like book sculptures. She transforms flat pages into three-dimensional objects and constructs entire landscapes filled with mystery. Su finds her books in secondhand book shops and always reads them first before starting to sculpt."
+  },
+  {
+    "title": "R2-D2 Coffee Press Will Give You The Force To Wake Up",
+    "src": "https://github.com/lightofdavinci/photo/blob/master/panda15.jpg?raw=true",
+    "description": "What's better than a cup of coffee in the morning? A cup of coffee in the morning with Star Wars, duh! BP has already introduced your kitchen to Darth Vader, but this time prepare to meet R2-D2."
+  },
+  {
+    "title": "My Kids And I Spent A Year Painting Over 1,000 Rocks And Hid Them For People To Spot And Photograph",
+    "src": "https://github.com/lightofdavinci/photo/blob/master/panda16.jpg?raw=true",
+    "description": "A few months ago I shared some of the Family Friendly Street Art my kids and I make – painting rocks or sticks or leaves and hiding them around town to bring a smile to passers-by. This year we decided to massively expand the idea and take it to Grand Rapids MI during the world’s largest ArtPrize."
   }
 ];
