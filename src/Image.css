@@ -27,6 +27,43 @@ a {
   position: relative;
 }
 
+.article__points {
+  position: absolute;
+  top: 0;
+  left: 14px;
+}
+
+.article__points i {
+  color: #888;
+}
+
+.article__points .fa-arrow-circle-up {
+  position: absolute;
+  top: 16px;
+  left: 210px;
+}
+
+.article__points .fa-arrow-circle-up:hover {
+  color: #56b863;
+  cursor: pointer;
+}
+
+.article__points .fa-arrow-circle-down {
+  position: absolute;
+  top: 16px;
+  left: 232px;
+}
+
+.article__points .fa-arrow-circle-down:hover {
+  color: #d74b1f;
+  cursor: pointer;
+}
+
+.article__points span {
+  color: #444;
+  font-weight: 700;
+}
+
 .article__pic {
   width: 90%;
 }
@@ -38,5 +75,5 @@ a {
   font-weight: 400;
   color: #222;
   padding: 0 10px;
-  bottom:0;  
+  bottom:0;
 }
