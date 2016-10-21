@@ -24,6 +24,7 @@ a {
   margin-bottom: 20px;
   border: 3px solid #555;
   border-radius: 8px;
+  position: relative;
 }
 
 .article__pic {
@@ -31,9 +32,11 @@ a {
 }
 
 .article__title {
+  position: absolute;
   font-size: 20px;
   font-family: 'Abhaya Libre', serif;
   font-weight: 400;
   color: #222;
   padding: 0 10px;
+  bottom:0;  
 }
