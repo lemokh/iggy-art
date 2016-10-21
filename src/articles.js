@@ -53,5 +53,10 @@ export const articles = [
     "title": "‘Porca Miseria’ By Ingo Maurer",
     "src": "https://github.com/lightofdavinci/photo/blob/master/panda11.jpg?raw=true",
     "description": "Ingo Maurer is a master of lamp-making. Porca Miseria chandelier is one of his best works. This design was custom made for a customer who had a sterile atmosphere in his kitchen."
+  },
+  {
+    "title":"Japanese Artist Tightly Rolls Newspaper To Create Incredibly Realistic Animal Sculptures",
+    "src":"https://github.com/lightofdavinci/photo/blob/master/panda12.jpg?raw=true",
+    "description":"For most us, newspapers are for reading. But for Chie Hitotsuyama, newspapers serve a whole different purpose. Because as you can see below, the Japanese artist doesn’t use them to catch up on the sport and gossip. She turns them into incredibly realistic animal sculptures instead."    
   }
 ];
