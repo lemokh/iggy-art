@@ -7,25 +7,25 @@ export const articles = [
   },
   {
     "title": "Incredible Origami Animals By Spanish Artist Gonzalo Calvo",
-    "src": "https://github.com/lightofdavinci/photo/blob/master/panda2.jpg?raw=true",
+    "src": "https://github.com/lightofdavinci/photo/blob/master/panda22.jpg?raw=true",
     "description": "Madrid-based full time musician Gonzalo Garcia Calvo has amazing origami skills. He explores many themes, but his true passion is animals.",
     "points": 126
   },
   {
     "title": "This Levitating Storm Cloud Is Actually A Bluetooth Speaker",
-    "src": "https://github.com/lightofdavinci/photo/blob/master/panda3.jpg?raw=true",
+    "src": "https://github.com/lightofdavinci/photo/blob/master/panda33.jpg?raw=true",
     "description": "After his interactive cloud lamp that could bring a thunderstorm into your living room, designer Richard Clarkson is back! This time, with a bluetooth speaker disguised as a floating cloud.",
     "points": 224
   },
   {
     "title": "My Daughter And I Are Ready To Terrorize The Neighborhood This Halloween",
-    "src": "https://github.com/lightofdavinci/photo/blob/master/panda4.jpg?raw=true",
+    "src": "https://github.com/lightofdavinci/photo/blob/master/panda44.jpg?raw=true",
     "description": "My daughter, who is 10 years old, and I worked over a long weekend to make these costumes. We used mostly old stuff from around the house but had to buy quite a bit of cushion foam for the beast. ",
     "points": 102
   },
   {
     "title": "Photographer Captures Soulful Portraits Of Dogs Enjoying Autumn",
-    "src": "https://github.com/lightofdavinci/photo/blob/master/panda5.jpg?raw=true",
+    "src": "https://github.com/lightofdavinci/photo/blob/master/panda55.jpg?raw=true",
     "description": "Anne Geier, a photographer from Austria, has a beautiful gift of capturing soulful portraits of dogs. Some of her best work is created in autumn, thanks to the golden colors and a misty weather adding a perfect magical atmosphere, which makes the portrait stand out even more.",
     "points": 251
   },
@@ -43,7 +43,7 @@ export const articles = [
   },
   {
     "title": "Poland Unveils Glow-In-The-Dark Bicycle Path That Is Charged By The Sun",
-    "src": "https://github.com/lightofdavinci/photo/blob/master/panda8.jpg?raw=true",
+    "src": "https://github.com/lightofdavinci/photo/blob/master/panda88.jpg?raw=true",
     "description": "Cycling is one of the most eco-friendly ways to travel, and thanks to this solar-powered bike lane that glows in the dark, it just got even moreso.",
     "points": 133
   },
@@ -55,7 +55,7 @@ export const articles = [
   },
   {
     "title": "This LEGO Bag Turns Your Hand Into LEGO",
-    "src": "https://github.com/lightofdavinci/photo/blob/master/panda10.jpg?raw=true",
+    "src": "https://github.com/lightofdavinci/photo/blob/master/panda100.jpg?raw=true",
     "description": "Recently we brought you a bicycle helmet that makes you look like a real life LEGO figure. Well, now you can add to your collection of LEGO-themed accessories with this awesome bag that turns your hand into a LEGO hand!",
     "points": 178
   },
@@ -79,7 +79,7 @@ export const articles = [
   },
   {
     "title": "Old Books Turned Into Fairytale Sculptures By Su Blackwell",
-    "src": "https://github.com/lightofdavinci/photo/blob/master/panda14.jpg?raw=true",
+    "src": "https://github.com/lightofdavinci/photo/blob/master/panda114.jpg?raw=true",
     "description": "Su Blackwell is an English artist who creates fairytale-like book sculptures. She transforms flat pages into three-dimensional objects and constructs entire landscapes filled with mystery. Su finds her books in secondhand book shops and always reads them first before starting to sculpt.",
     "points": 708
   },
