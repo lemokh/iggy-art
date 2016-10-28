@@ -1,0 +1,20 @@
+.app__logout {
+  position: absolute;
+  top: 7px;
+  right: 40px;
+  width: 140px;
+  height: 42px;
+  background-color: #fff;
+  color: #aaa;
+  font-size: 17px;
+  font-weight: bold;
+  padding-bottom: 7px;
+  border-radius: 3px;
+  border: 2px solid #bbb;
+}
+
+.app__logout:hover {
+  background-color: #888;
+  color: #fff;
+  cursor: pointer;
+}

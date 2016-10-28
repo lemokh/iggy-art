@@ -1,0 +1,19 @@
+.add__post {
+  position: absolute;
+  top: 7px;
+  right: 190px;
+  width: 140px;
+  height: 30px;
+  background-color: #d74b1f;
+  color: #fff;
+  font-size: 17px;
+  font-weight: bold;
+  padding-top: 8px;
+  border-radius: 3px;
+  border-bottom: 4px solid #c63a0e;
+}
+
+.add__post:hover {
+  background-color: #e85c2f;
+  cursor: pointer;
+}

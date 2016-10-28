@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
-import './Image.css';
+import './css/Image.css';
 
 export default class Image extends Component {
   render() {

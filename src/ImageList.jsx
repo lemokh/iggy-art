@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import Image from './Image';
+import Image from './Image.jsx';
 
 export default class ImageList extends Component {
-
   render() {
     return (<ul className="article__list">{
       this.props.articles.map((article,id) => {
@@ -10,5 +9,4 @@ export default class ImageList extends Component {
       })
     }</ul>);
   }
-
 }

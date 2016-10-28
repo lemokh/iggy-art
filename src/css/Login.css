@@ -1,0 +1,132 @@
+.app__login {
+  position: absolute;
+  top: 7px;
+  right: 20px;
+  width: 160px;
+  height: 32px;
+  background-color: #fff;
+  color: #aaa;
+  font-size: 17px;
+  font-weight: bold;
+  padding-top: 6px;
+  border-radius: 3px;
+  border: 2px solid #bbb;
+}
+
+.app__login:hover {
+  background-color: #888;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* The Modal (background) */
+.login__modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.8); /* Black w/ opacity */
+}
+
+.login__modal__content {
+  position: relative;
+  margin: 5% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 3px solid #eee;
+  border-radius: 7px;
+  width: 80%; /* Could be more or less, depending on screen size */
+  max-width: 550px;
+  text-align: left;
+  background-color: #567;
+}
+
+.login__modal__title {
+  color: #ccc;
+}
+
+.login__form {
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #ccc;
+  text-align: left;
+}
+
+.login__form input {
+  margin: 15px 0;
+  padding-left: 10px;
+  height: 35px;
+  width: 50%;
+  border: none;
+  border-radius: 3px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #555;
+}
+
+.login__form input:focus {
+  box-shadow: inset 0 0 3px #000;
+  outline: none;
+}
+
+.login__btn {
+  background-color: #dd4c39;
+  border:none;
+  margin-top: 10px;
+  height: 40px;
+  width: 120px;
+  border-radius: 3px;
+  color: #fff;
+  font-size: 16px;
+}
+
+.login__btn:hover {
+  cursor: pointer;
+}
+
+.login__logo {
+  position: absolute;
+  width: 40%;
+  right: 20px;
+  top: 90px;
+}
+
+.login__modal__content p {
+  color: #ccc;
+}
+
+.login__modal__content p span{
+  color: #fff;
+  text-decoration: underline;
+}
+
+.login__modal__content p span:hover{
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.login__modal__close {
+  color: #333;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.login__modal__close:hover,
+.login__modal__close:focus {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.e__error, .le__error {
+  color: #f66;
+}
+
+.p__error, .lp__error {
+  color: #f66;
+}

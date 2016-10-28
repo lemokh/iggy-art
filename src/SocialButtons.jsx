@@ -1,5 +1,5 @@
 import React from 'react';
-import './SocialButtons.css';
+import './css/SocialButtons.css';
 
 export default () => (
   <div className="App-social-buttons">

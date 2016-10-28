@@ -8,6 +8,7 @@
 }
 
 .App-main-nav {
+  position: relative;
   height: 60px;
   background-color: white;
 }

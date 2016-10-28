@@ -1,4 +1,4 @@
 import React from 'react';
-import './NoMatch.css';
+import './css/NoMatch.css';
 
 export default () => (<div className="fof"></div>);
