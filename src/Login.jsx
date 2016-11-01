@@ -6,16 +6,6 @@ import LoginForm from './LoginForm.jsx';
 import SignupForm from './SignupForm.jsx';
 
 export default class Register extends Component {
-  componentDidMount(){
-    window.onclick = (event) => {
-      if (event.target === document.getElementsByClassName("login__modal")[0]) {
-          document.getElementsByClassName("login__modal")[0].style.display = "none";
-      }
-      else if (event.target === document.getElementsByClassName("signup__modal")[0]) {
-          document.getElementsByClassName("signup__modal")[0].style.display = "none";
-      }
-    }
-  };
   openLoginModal(){
     document.getElementsByClassName("signup__modal")[0].style.display = "none";
     document.getElementsByClassName("login__modal")[0].style.display = "block";
@@ -53,5 +43,17 @@ export default class Register extends Component {
               </div>
             </div>
             );
+  };
+  componentDidMount(){
+    window.onclick = (event) => {
+      if (event.target === document.getElementsByClassName("login__modal")[0]) {
+          document.getElementsByClassName("login__modal")[0].style.display = "none";
+      }
+      else if (event.target === document.getElementsByClassName("signup__modal")[0]) {
+          document.getElementsByClassName("signup__modal")[0].style.display = "none";
+      } else if (event.target === document.getElementsByClassName("add__post__modal")[0]) {
+          document.getElementsByClassName("add__post__modal")[0].style.display = "none";
+      }
+    }
   };
 }

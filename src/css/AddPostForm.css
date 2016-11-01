@@ -1,0 +1,117 @@
+.add__post__title {
+  margin-top: 25px;
+  width: 87%;
+  height: 50px;
+  padding: 0 20px;
+  font-size: 35px;
+  font-weight: bold;
+  border: none;
+}
+
+.add__post__description {
+  margin-top: 10px;
+  width: 87% !important;
+  height: 100px;
+  padding: 10px 20px;
+  font-size: 25px;
+  resize: none;
+  border: none;
+}
+
+.add__post__form input {
+  color: #555;
+}
+
+.add__post__form textarea {
+  color: #555;
+}
+
+.add__post__form input:focus {
+  outline: none;
+}
+
+.add__post__form textarea:focus {
+  outline: none;
+}
+
+.add__post__form input:hover::placeholder {
+  color: #888;
+}
+
+.add__post__form textarea:hover::placeholder {
+  color: #888;
+}
+
+.drop__zone {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  margin-bottom: 50px;
+  height: 200px;
+  width: 92%;
+  border: 3px dashed #999;
+  position: relative;
+}
+
+.drop__zone__paragraph {
+  color: #ccc;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.active__zone {
+  background-color: #222;
+  border: 3px solid #6acd77;
+}
+
+.drop__zone__preview {
+  height: 200px;
+  position: absolute;
+  display: none;
+  top: -3px;
+  right: 0;
+  left: 0;
+  margin-left: auto;
+  margin-right: auto;
+  border: 3px solid #ddd;
+}
+
+.drop__zone__error {
+  display: none;
+  background-color: #f66;
+  width: 93%;
+  margin-top: 7px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 7px 0;
+}
+
+.drop__zone__error p {
+  font-size: 20px;
+  color: #fff;
+  margin: 0;
+}
+
+.post__submit {
+  position: absolute;
+  bottom: 11px;
+  right: 47px;
+  font-size: 16px;
+  font-weight: bold;
+  width: 145px;
+  height: 47px;
+  padding: 0 30px;
+  color: #fff;
+  background-color: #59bc66;
+  border: none;
+  border-radius: 5px;
+}
+
+.post__submit:hover {
+  background-color: #6acd77;
+  cursor: pointer;
+}
+
+.post__submit i {
+  margin-left: 5px;
+}
