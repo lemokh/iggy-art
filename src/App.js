@@ -27,7 +27,7 @@ export default class App extends Component {
     });
     const artRef = firebase.database().ref("articles");
     artRef.on('value', (snap) => {
-      this.setState({articles: snap.val()});      
+      this.setState({articles: snap.val()});
     });
   };
   render() {
@@ -40,9 +40,9 @@ export default class App extends Component {
     return (
       <div className="App">
         <div className="App-header"><img src={jumbo} alt="jumbotron" /></div>
-        <div className="App-main-nav"><AddPost />{llComponent}</div>
+        <div className="App-main-nav"><AddPost loggedIn={this.state.userRegistered}/>{llComponent}</div>
         <div className="App-nav"></div>
-        <ImageList articles={this.state.articles} />
+        <ImageList articles={this.state.articles}/>
         <SocialButtons />
         <div className="App-footer"></div>
       </div>

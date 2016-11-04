@@ -3,8 +3,16 @@ import AddPostForm from './AddPostForm';
 import './css/AddPost.css';
 
 export default class AddPost extends Component {
+  constructor() {
+    super();
+    this.openAddPostModal = this.openAddPostModal.bind(this);
+  };
   openAddPostModal(){
-    document.getElementsByClassName("add__post__modal")[0].style.display = "block";
+    if(this.props.loggedIn){
+      document.getElementsByClassName("add__post__modal")[0].style.display = "block";
+    } else {
+      document.getElementsByClassName("login__modal")[0].style.display = "block";
+    }
   };
   closeAddPostModal(){
     document.getElementsByClassName("add__post__modal")[0].style.display = "none";

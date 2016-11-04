@@ -52,13 +52,17 @@ export default class AddPostForm extends Component {
     const storageRef = storage.ref();
     const imagesRef = storageRef.child("images/" + guid());
     imagesRef.put(this.state.file).then((snapshot) => {
-      //perhaps will use linkedlist instead
-      firebase.database().ref('articles/'+ 16).set({
+      firebase.database().ref('articles').push({
                title: this.state.title,
                description: this.state.description,
                src: snapshot.a.downloadURLs[0],
                points: 0
+            }).then(()=>{
+              document.getElementsByClassName("drop__zone__preview")[0].style.display = "none";
+              document.getElementsByClassName("drop__zone__paragraph")[0].style.display = "block";
+              this.setState({preview: "", title: "", description: "", file: {}});
             });
+            document.getElementsByClassName("add__post__modal")[0].style.display = "none";
     });
   };
   render(){
@@ -68,9 +72,9 @@ export default class AddPostForm extends Component {
           <input className="add__post__title" type="text" placeholder="Post title..." value={this.state.title}  onChange={this.handleTitleChange}/><br/>
           <textarea className="add__post__description" placeholder="Tell us your story here..." value={this.state.description}  onChange={this.handleDescriptionChange}></textarea><br/>
           <div className="drop__zone__error"><p>Only jpg, gif, and png images are allowed</p></div>
-          <Dropzone className="drop__zone" activeClassName="active__zone" onDrop={this.onDrop.bind(this)} multiple={false} minSize={30000} maxSize={1000000} accept={'image/*'}>
+          <Dropzone className="drop__zone" activeClassName="active__zone" onDrop={this.onDrop.bind(this)} multiple={false} minSize={30000} maxSize={4000000} accept={'image/*'}>
               <p className="drop__zone__paragraph">Drop image file here, or click to select image to upload.</p>
-              <img className="drop__zone__preview" src={this.state.preview} alt=""/>
+              <img className="drop__zone__preview" src={this.state.preview} alt="preview"/>
           </Dropzone>
           <button className="post__submit" type="submit">Publish <i className="fa fa-share"></i></button>
         </form>

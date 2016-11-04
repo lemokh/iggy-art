@@ -3,7 +3,7 @@ import './css/Login.css';
 import './css/Signup.css';
 import logo from './img/logo.png';
 import LoginForm from './LoginForm.jsx';
-import SignupForm from './SignupForm.jsx';
+import SignupForm from './SignupForm';
 
 export default class Register extends Component {
   openLoginModal(){
