@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import AddPostForm from './AddPostForm';
+import AddPostForm from './AddPostForm.jsx';
 import './css/AddPost.css';
 
 export default class AddPost extends Component {

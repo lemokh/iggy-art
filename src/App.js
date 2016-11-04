@@ -3,7 +3,7 @@ import './firebase.config';
 import React, { Component } from 'react';
 import jumbo from './img/panda-head.jpg';
 import ImageList from './ImageList.jsx';
-import AddPost from './AddPost';
+import AddPost from './AddPost.jsx';
 import Login from './Login.jsx';
 import Logout from './Logout.jsx';
 import SocialButtons from './SocialButtons.jsx';

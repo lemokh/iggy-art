@@ -2,7 +2,7 @@ import React from 'react';
 import { render } from 'react-dom';
 import { Router, Route, browserHistory } from 'react-router';
 import App from './App';
-import Post from './Post';
+import Post from './Post.jsx';
 import NoMatch from './NoMatch.jsx';
 import './css/index.css';
 
