@@ -11,31 +11,27 @@ export default class Post extends Component {
       articles: []
     };
   };
+  render(){
+    const articles = Object.values(this.state.articles);
+    articles.reverse();
+    const postId = this.props.params.postId;
+    if(articles[postId] === undefined){return <NoMatch />;};
+    return (<div>
+              <div className="Post-head-block"></div>
+              <div className="Post-nav-block"></div>
+              <div className="Post-thumbnail">
+                <div className="Post__text">
+                  <p className="Post__title">{articles[postId].title}</p>
+                  <p className="Post__description">{articles[postId].description}</p>
+                </div>
+                <img className="Post__pic" src={articles[postId].src} alt="width:90%"/>
+              </div>
+            </div>);
+  };
   componentDidMount() {
     const artRef = firebase.database().ref("articles");
     artRef.on('value', (snap) => {
       this.setState({articles: snap.val()});
     })
   };
-  render(){
-    const artArray = [];
-    for (let key in this.state.articles) {
-      if (this.state.articles.hasOwnProperty(key)) {
-        artArray.unshift(this.state.articles[key]);
-      }
-    }
-    const postId = this.props.params.postId;
-    if(artArray[postId] === undefined){return <NoMatch />;};
-    return (<div>
-              <div className="Post-head-block"></div>
-              <div className="Post-nav-block"></div>
-              <div className="Post-thumbnail">
-                <div className="Post__text">
-                  <p className="Post__title">{artArray[postId].title}</p>
-                  <p className="Post__description">{artArray[postId].description}</p>
-                </div>
-                <img className="Post__pic" src={artArray[postId].src} alt="width:90%"/>
-              </div>
-            </div>);
-  }
 }
