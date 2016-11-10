@@ -31,6 +31,7 @@ export default class App extends Component {
     });
   };
   render() {
+    console.log(process.env.CHECK);
     let llComponent;
     if(this.state.userRegistered){
       llComponent = <Logout />;
