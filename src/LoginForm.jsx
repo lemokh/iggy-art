@@ -4,7 +4,12 @@ import firebase from 'firebase';
 export default class LoginForm extends Component {
   constructor() {
     super();
-    this.state = {email: '', password: ''};
+    this.state = {
+      email: '',
+      password: '',
+      eError: '',
+      pError: ''
+        };
     this.handleEmailChange = this.handleEmailChange.bind(this);
     this.handlePasswordChange = this.handlePasswordChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -22,26 +27,22 @@ export default class LoginForm extends Component {
       let errorCode = error.code;
       // let errorMessage = error.message;
       if(errorCode === 'auth/invalid-email'){
-        document.getElementsByClassName('lp__error')[0].innerHTML = "";
-        document.getElementsByClassName('le__error')[0].innerHTML = "Format error";
+        this.setState({eError: 'Format error',pError: ''});
       } else if(errorCode === 'auth/user-disabled'){
-        document.getElementsByClassName('lp__error')[0].innerHTML = "";
-        document.getElementsByClassName('le__error')[0].innerHTML = "User is disabled";
+        this.setState({eError: 'User is disabled',pError: ''});
       } else if(errorCode === 'auth/user-not-found'){
-        document.getElementsByClassName('lp__error')[0].innerHTML = "";
-        document.getElementsByClassName('le__error')[0].innerHTML = "User not found";
+        this.setState({eError: 'User not found',pError: ''});
       } else if(errorCode === 'auth/wrong-password'){
-        document.getElementsByClassName('le__error')[0].innerHTML = "";
-        document.getElementsByClassName('lp__error')[0].innerHTML = "Wrong password";
+        this.setState({eError: '',pError: 'Wrong password'});
       }
     });
   };
   render(){
     return(
       <form className="login__form" onSubmit={this.handleSubmit}>
-        Email: <span className="le__error"></span><br/>
+        Email: <span className="le__error">{this.state.eError}</span><br/>
         <input type="text" name="email" value={this.state.email}  onChange={this.handleEmailChange}/><br/>
-        Password: <span className="lp__error"></span><br/>
+        Password: <span className="lp__error">{this.state.pError}</span><br/>
         <input type="password" name="password" value={this.state.password} onChange={this.handlePasswordChange}/><br/>
         <button className="login__btn" type="submit">Log in</button>
       </form>
