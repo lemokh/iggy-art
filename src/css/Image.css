@@ -13,7 +13,7 @@ a {
     vertical-align: top;
 }
 
-.thumbnail {
+figure {
   background-color: white;
   width: 275px;
   height: 350px;

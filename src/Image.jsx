@@ -5,7 +5,7 @@ import './css/Image.css';
 export default class Image extends Component {
   render() {
     return (<li>
-              <div className="thumbnail">
+              <figure>
                 <div className="article__points">
                   <p>points: <span>{this.props.points}</span></p>
                   <i className="fa fa-arrow-circle-up fa-lg"></i>
@@ -13,9 +13,11 @@ export default class Image extends Component {
                 </div>
                 <Link to={`/post/${this.props.id}`}>
                   <img className="article__pic" src={this.props.src} alt='width:500px' />
-                  <p className="article__title">{this.props.title}</p>
+                  <figcaption>
+                    <p className="article__title">{this.props.title}</p>
+                  </figcaption>  
                 </Link>
-              </div>
+              </figure>
             </li>);
   }
 }

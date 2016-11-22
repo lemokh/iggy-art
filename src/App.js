@@ -10,14 +10,40 @@ import SocialButtons from './SocialButtons.jsx';
 import './css/App.css';
 
 export default class App extends Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
     this.state = {
       articles: [],
       userRegistered: false
     };
   };
-  componentWillMount(){
+  render() {
+    let llComponent;
+    if(this.state.userRegistered){
+      llComponent = <Logout />;
+    } else {
+      llComponent = <Login />
+    }
+    return (
+      <div className="App">
+        <div className="wrapper">
+          <header><img src={jumbo} alt="jumbotron" /></header>
+          <nav>
+            <div className="App-main-nav">
+              <AddPost loggedIn={this.state.userRegistered}/>{llComponent}</div>
+            <div className="App-nav"></div>
+          </nav>
+          <main><ImageList articles={this.state.articles}/></main>
+          <div className="push"></div>
+        </div>
+        <footer>
+          <SocialButtons />
+          <div className="App-footer"></div>
+        </footer>
+      </div>
+    );
+  };
+  componentDidMount(){
     firebase.auth().onAuthStateChanged((user) => {
       if(user){
         this.setState({userRegistered: true});
@@ -30,22 +56,4 @@ export default class App extends Component {
       this.setState({articles: snap.val()});
     });
   };
-  render() {
-    let llComponent;
-    if(this.state.userRegistered){
-      llComponent = <Logout />;
-    } else {
-      llComponent = <Login />
-    }
-    return (
-      <div className="App">
-        <div className="App-header"><img src={jumbo} alt="jumbotron" /></div>
-        <div className="App-main-nav"><AddPost loggedIn={this.state.userRegistered}/>{llComponent}</div>
-        <div className="App-nav"></div>
-        <ImageList articles={this.state.articles}/>
-        <SocialButtons />
-        <div className="App-footer"></div>
-      </div>
-    );
-  }
 }

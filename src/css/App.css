@@ -1,8 +1,9 @@
 .App {
   text-align: center;
+  height: 100%;
 }
 
-.App-header {
+header {
   padding: 0;
   background-color: #999;
 }
@@ -21,4 +22,14 @@
 .App-footer {
   height: 90px;
   background-color: #111;
+}
+
+/* using wrapper and push for sticky footer */
+.wrapper {
+  min-height: 100%;
+  margin-bottom: -160px;
+}
+
+.push, footer {
+  height: 160px;
 }
