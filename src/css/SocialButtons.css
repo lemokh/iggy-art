@@ -13,13 +13,19 @@
   margin-top: 10px;
   padding: 10px;
   font-size: 15px;
-  background-color: #fff;
   margin-left: 6px;
   margin-right: 6px;
   width: 20px;
   border-radius: 4px;
+  background-color: #fff;
 }
 
-.social__nav i {
+.fa-facebook, .fa-codepen, .fa-github, .fa-vk{
   color: #001;
+  transition: color 0.5s ease;
 }
+
+.fa-facebook:hover{color: #FF851B;}
+.fa-codepen:hover{color: #FF851B;}
+.fa-github:hover{color: #FF851B;}
+.fa-vk:hover{color: #FF851B;}
