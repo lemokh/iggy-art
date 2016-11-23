@@ -1,7 +1,7 @@
 import firebase from 'firebase';
 import './firebase.config';
 import React, { Component } from 'react';
-import Jumbotron from './Jumbotron';
+import Jumbotron from './Jumbotron.jsx';
 import ImageList from './ImageList.jsx';
 import AddPost from './AddPost.jsx';
 import Login from './Login.jsx';
