@@ -1,7 +1,7 @@
 import firebase from 'firebase';
 import './firebase.config';
 import React, { Component } from 'react';
-import jumbo from './img/panda-head.jpg';
+import Jumbotron from './Jumbotron';
 import ImageList from './ImageList.jsx';
 import AddPost from './AddPost.jsx';
 import Login from './Login.jsx';
@@ -27,7 +27,7 @@ export default class App extends Component {
     return (
       <div className="App">
         <div className="wrapper">
-          <header><img src={jumbo} alt="jumbotron" /></header>
+          <header><Jumbotron /></header>
           <nav>
             <div className="App-main-nav">
               <AddPost loggedIn={this.state.userRegistered}/>{llComponent}</div>

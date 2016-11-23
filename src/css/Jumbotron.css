@@ -1,0 +1,7 @@
+@import url('https://fonts.googleapis.com/css?family=Freckle+Face');
+.parallax-title {
+  font-family: 'Freckle Face', cursive;
+  font-size: 90px;
+  margin: 20% 0 14% 0;
+  color: #fff;
+}
