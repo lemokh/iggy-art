@@ -7,6 +7,7 @@ import AddPost from './AddPost.jsx';
 import Login from './Login.jsx';
 import Logout from './Logout.jsx';
 import SocialButtons from './SocialButtons.jsx';
+import AlertContainer from 'react-alert';
 import './css/App.css';
 
 export default class App extends Component {
@@ -16,21 +17,24 @@ export default class App extends Component {
       articles: [],
       userRegistered: false
     };
+    this.alertOptions = {
+      offset: 14,
+      position: 'top right',
+      theme: 'light',
+      transition: 'scale',
+      time: 3000
+    };
   };
   render() {
-    let llComponent;
-    if(this.state.userRegistered){
-      llComponent = <Logout />;
-    } else {
-      llComponent = <Login />
-    }
     return (
       <div className="App">
         <div className="wrapper">
           <header><Jumbotron /></header>
           <nav>
             <div className="App-main-nav">
-              <AddPost loggedIn={this.state.userRegistered}/>{llComponent}</div>
+              <AddPost loggedIn={this.state.userRegistered}/>
+              {this.state.userRegistered? <Logout /> : <Login />}
+            </div>
             <div className="App-nav"></div>
           </nav>
           <main><ImageList articles={this.state.articles}/></main>
@@ -40,6 +44,7 @@ export default class App extends Component {
           <SocialButtons />
           <div className="App-footer"></div>
         </footer>
+        <AlertContainer ref={(a) => global.msg = a} {...this.alertOptions} />
       </div>
     );
   };

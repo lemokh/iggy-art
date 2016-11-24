@@ -35,6 +35,13 @@ export default class LoginForm extends Component {
       } else if(errorCode === 'auth/wrong-password'){
         this.setState({eError: '',pError: 'Wrong password'});
       }
+    }).then((success)=>{
+      if(success){
+        global.msg.show(`Welcome back, ${this.state.email}, you've been logged in.`, {
+            type: 'success',
+            time: 4000
+        })
+      }
     });
   };
   render(){

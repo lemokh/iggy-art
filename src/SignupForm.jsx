@@ -14,7 +14,6 @@ export default class SignupForm extends Component {
     this.handlePasswordChange = this.handlePasswordChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   };
-
   handleEmailChange(event) {
     this.setState({email: event.target.value});
   };
@@ -35,6 +34,12 @@ export default class SignupForm extends Component {
       } else if (errorCode){
         this.setState({eError: errorCode, pError: ''});
       }
+    }).then((success)=>{
+      if(success){
+        global.msg.show('You have successfully registered and logged in.', {
+            type: 'success'
+        })
+      }
     });
   };
   render(){
@@ -45,7 +50,7 @@ export default class SignupForm extends Component {
         Password: <span className="p__error">{this.state.pError}</span><br/>
         <input type="password" name="password" value={this.state.password} onChange={this.handlePasswordChange}/><br/>
         <button className="signup__btn" type="submit">Sign Up</button>
-      </form>
+    </form>
     );
   };
 }
