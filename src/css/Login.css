@@ -89,6 +89,10 @@
   cursor: pointer;
 }
 
+.login__btn:focus {
+  outline: none;
+}
+
 .login__logo {
   position: absolute;
   width: 40%;
