@@ -25,6 +25,15 @@ export default class App extends Component {
       time: 3000
     };
   };
+  componentWillMount(){
+    firebase.auth().onAuthStateChanged((user) => {
+      if(user){
+        this.setState({userRegistered: true});
+      } else {
+        this.setState({userRegistered: false});
+      }
+    });
+  };
   render() {
     return (
       <div className="App">
@@ -49,13 +58,6 @@ export default class App extends Component {
     );
   };
   componentDidMount(){
-    firebase.auth().onAuthStateChanged((user) => {
-      if(user){
-        this.setState({userRegistered: true});
-      } else {
-        this.setState({userRegistered: false});
-      }
-    });
     const artRef = firebase.database().ref("articles");
     artRef.on('value', (snap) => {
       this.setState({articles: snap.val()});
