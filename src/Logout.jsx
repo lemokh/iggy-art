@@ -4,7 +4,9 @@ import './css/Logout.css';
 
 export default class Logout extends Component {
   handleSignOut(){
-    firebase.auth().signOut().then(()=>{  // Sign-out successful
+    firebase.auth().signOut().then(()=>{
+      window.location.reload();
+      document.getElementsByClassName("login__modal")[0].style.display = "none";
     },(error)=>{
       // An error happened.
     });

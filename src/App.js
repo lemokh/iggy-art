@@ -15,7 +15,8 @@ export default class App extends Component {
     super();
     this.state = {
       articles: [],
-      userRegistered: false
+      userRegistered: false,
+      likes: []
     };
     this.alertOptions = {
       offset: 14,
@@ -46,7 +47,7 @@ export default class App extends Component {
             </div>
             <div className="App-nav"></div>
           </nav>
-          <main><ImageList articles={this.state.articles}/></main>
+          <main><ImageList articles={this.state.articles} likes={this.state.likes}/></main>
           <div className="push"></div>
         </div>
         <footer>
@@ -58,9 +59,37 @@ export default class App extends Component {
     );
   };
   componentDidMount(){
-    const artRef = firebase.database().ref("articles");
-    artRef.on('value', (snap) => {
+    firebase.database().ref("articles").on('value', (snap) => {
+      if(snap.val() !== null){
       this.setState({articles: snap.val()});
+      firebase.auth().onAuthStateChanged((user) => {
+        if(user){
+            firebase.database().ref("votes/" + user.uid).on('value',(snapshot)=>{
+              if(snapshot.val() !== null){
+              const likesIds = Object.values(snapshot.val());
+              const arrIds = Object.keys(this.state.articles);
+              const likes = [];
+              for(let i=0,len=arrIds.length;i<len;i++){
+                for(let j=0,leng=likesIds.length;j<leng;j++){
+                  if (arrIds[i] === Object.keys(likesIds[j])[0]){
+                    if (likesIds[j][arrIds[i]] === "like"){
+                         likes.push("l");
+                         break;
+                    } else {
+                         likes.push("d");
+                         break;
+                    }
+                  } else if (j === leng-1 && arrIds[i] !== Object.keys(likesIds[j])[0]){
+                      likes.push("");
+                  }
+                }
+              }
+              this.setState({likes});
+              }
+            });
+          }
+      });
+      }
     });
   };
 }

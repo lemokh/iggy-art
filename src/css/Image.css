@@ -76,3 +76,11 @@ figure {
   padding: 0 10px;
   bottom:0;
 }
+
+.--liked {
+  color: #56b863 !important;
+}
+
+.--disliked {
+  color: #d74b1f !important;
+}
