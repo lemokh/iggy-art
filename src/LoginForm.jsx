@@ -4,24 +4,15 @@ import firebase from 'firebase';
 export default class LoginForm extends Component {
   constructor() {
     super();
-    this.state = {
-      email: '',
-      password: '',
-      eError: '',
-      pError: ''
-        };
-    this.handleEmailChange = this.handleEmailChange.bind(this);
-    this.handlePasswordChange = this.handlePasswordChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
+    this.state = { email: '', password: '', eError: '', pError: '' };
   };
-
-  handleEmailChange(event) {
+  handleEmailChange = (event) => {
     this.setState({email: event.target.value});
   };
-  handlePasswordChange(event) {
+  handlePasswordChange = (event) => {
     this.setState({password: event.target.value});
   };
-  handleSubmit(event) {
+  handleSubmit = (event) => {
     event.preventDefault();
     firebase.auth().signInWithEmailAndPassword(this.state.email, this.state.password).catch((error) => {
       let errorCode = error.code;
