@@ -3,11 +3,7 @@ import AddPostForm from './AddPostForm.jsx';
 import './css/AddPost.css';
 
 export default class AddPost extends Component {
-  constructor() {
-    super();
-    this.openAddPostModal = this.openAddPostModal.bind(this);
-  };
-  openAddPostModal(){
+  openAddPostModal=()=>{
     if(this.props.loggedIn){
       document.getElementsByClassName("add__post__modal")[0].style.display = "block";
     } else {
