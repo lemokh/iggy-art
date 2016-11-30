@@ -15,8 +15,7 @@ export default class LoginForm extends Component {
   handleSubmit = (event) => {
     event.preventDefault();
     firebase.auth().signInWithEmailAndPassword(this.state.email, this.state.password).catch((error) => {
-      let errorCode = error.code;
-      // let errorMessage = error.message;
+      const errorCode = error.code;
       if(errorCode === 'auth/invalid-email'){
         this.setState({eError: 'Format error',pError: ''});
       } else if(errorCode === 'auth/user-disabled'){
