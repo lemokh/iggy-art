@@ -32,3 +32,8 @@ export default class ImageList extends Component {
     );
   };
 }
+
+ImageList.propTypes = {
+  articles: React.PropTypes.array,
+  likes: React.PropTypes.arrayOf(React.PropTypes.string)
+};
