@@ -77,7 +77,7 @@
 }
 
 .drop__zone__error {
-  display: none;
+  display: block;
   background-color: #f66;
   width: 93%;
   margin-top: 7px;
