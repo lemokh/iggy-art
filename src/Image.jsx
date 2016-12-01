@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import firebase from 'firebase';
 import { Link } from 'react-router';
+import classNames from 'classnames';
 import './css/Image.css';
 
 export default class Image extends Component {
@@ -77,15 +78,21 @@ export default class Image extends Component {
     })
   };
   render() {
+    const btnLike = classNames({
+      'fa fa-arrow-circle-up fa-lg': true,
+      '--liked': this.props.tl === "l"
+    });
+    const btnDislike = classNames({
+      'fa fa-arrow-circle-down fa-lg': true,
+      '--disliked': this.props.tl === "d"
+    });
     return (<li>
               <figure>
                 <div className="article__points">
                   <p>points: <span>{this.props.points}</span></p>
-                  <i id={`l${this.props.pid}`}
-                  className={(this.props.tl === "l")?"fa fa-arrow-circle-up fa-lg --liked":"fa fa-arrow-circle-up fa-lg"}
+                  <i id={`l${this.props.pid}`} className={btnLike}
                   onClick={this.handleUpVote.bind(this, this.props.pid, this.props.points)}></i>
-                  <i id={`d${this.props.pid}`}
-                  className={(this.props.tl === "d")?"fa fa-arrow-circle-down fa-lg --disliked":"fa fa-arrow-circle-down fa-lg"}
+                  <i id={`d${this.props.pid}`} className={btnDislike}
                   onClick={this.handleDownVote.bind(this, this.props.pid, this.props.points)}></i>
                 </div>
                 <Link to={`/post/${this.props.id}`}>

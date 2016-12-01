@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import firebase from 'firebase';
 import Dropzone from 'react-dropzone';
 import Progress from 'react-progressbar';
+import classNames from 'classnames';
 import './css/AddPostForm.css';
 
 const dropzoneOptions = {
@@ -89,12 +90,13 @@ export default class AddPostForm extends Component {
     }
   };
   render(){
+    const dropZoneErrClass = classNames({ "drop__zone__error": this.state.dropZoneErr });
     return (
       <div>
         <form className="add__post__form" onSubmit={this.handleSubmit}>
           <input className="add__post__title" type="text" placeholder="Post title..." value={this.state.title}  onChange={this.handleTitleChange}/><br/>
           <textarea className="add__post__description" placeholder="Tell us your story here..." value={this.state.description}  onChange={this.handleDescriptionChange}></textarea><br/>
-          <div className={(this.state.dropZoneErr)?"drop__zone__error":""}>
+          <div className={dropZoneErrClass}>
             <p>{this.state.dropZoneMsg}</p>
           </div>
           <Dropzone className="drop__zone" activeClassName="active__zone"  onDrop={this.onDrop.bind(this)} {...dropzoneOptions}>
