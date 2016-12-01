@@ -7,26 +7,23 @@ import './css/AddPostForm.css';
 export default class AddPostForm extends Component {
   constructor() {
    super();
-   this.state = {
-      file: {},
-      preview: "",
-      title: "",
-      description: "",
-      progress: "",
-      dropZoneMsg: "",
-      dropZoneErr: false
-   };
-   this.dropzoneOptions = {
-      multiple: false,
-      minSize: 30000,
-      maxSize: 5000000,
-      accept: 'image/*'
-   };
-   this.handleTitleChange = this.handleTitleChange.bind(this);
-   this.handleDescriptionChange = this.handleDescriptionChange.bind(this);
-   this.handleSubmit = this.handleSubmit.bind(this);
+     this.state = {
+        file: {},
+        preview: "",
+        title: "",
+        description: "",
+        progress: "",
+        dropZoneMsg: "",
+        dropZoneErr: false
+     };
+     this.dropzoneOptions = {
+        multiple: false,
+        minSize: 30000,
+        maxSize: 5000000,
+        accept: 'image/*'
+     };
   };
-  onDrop(accepted, rejected){
+  onDrop = (accepted, rejected) => {
     if(accepted[0] !== undefined){
       const file = accepted[0];
       document.getElementsByClassName('drop__zone__preview')[0].style.display = "block";
@@ -45,13 +42,13 @@ export default class AddPostForm extends Component {
       });
     }
   };
-  handleTitleChange(event) {
+  handleTitleChange = (event) => {
     this.setState({title: event.target.value});
   };
-  handleDescriptionChange(event) {
+  handleDescriptionChange = (event) => {
     this.setState({description: event.target.value});
   };
-  handleSubmit(event){
+  handleSubmit = (event) => {
     event.preventDefault();
     if(this.state.title && this.state.description && !(Object.keys(this.state.file).length === 0 && this.state.file.constructor === Object)){
     this.setState({dropZoneMsg: "", dropZoneErr: false});
@@ -105,7 +102,7 @@ export default class AddPostForm extends Component {
           </Dropzone>
           <div className="loading-bar">
             <Progress completed={this.state.progress} />
-            <p>{this.state.progress !== ""? Math.ceil(this.state.progress) + "% done" : ""}</p>
+            <p>{(this.state.progress !== "")? Math.ceil(this.state.progress) + "% done" : ""}</p>
           </div>
           <button className="post__submit" type="submit">Publish <i className="fa fa-share"></i></button>
         </form>
