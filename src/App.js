@@ -10,6 +10,14 @@ import SocialButtons from './SocialButtons.jsx';
 import AlertContainer from 'react-alert';
 import './css/App.css';
 
+const alertOptions = {
+  offset: 14,
+  position: 'top right',
+  theme: 'light',
+  transition: 'scale',
+  time: 3000
+};
+
 export default class App extends Component {
   constructor() {
     super();
@@ -17,13 +25,6 @@ export default class App extends Component {
       articles: [],
       userRegistered: false,
       likes: []
-    };
-    this.alertOptions = {
-      offset: 14,
-      position: 'top right',
-      theme: 'light',
-      transition: 'scale',
-      time: 3000
     };
   };
   componentWillMount(){
@@ -54,7 +55,7 @@ export default class App extends Component {
           <SocialButtons />
           <div className="App-footer"></div>
         </footer>
-        <AlertContainer ref={(a) => global.msg = a} {...this.alertOptions} />
+        <AlertContainer ref={(a) => global.msg = a} {...alertOptions} />
       </div>
     );
   };

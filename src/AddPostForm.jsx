@@ -4,6 +4,13 @@ import Dropzone from 'react-dropzone';
 import Progress from 'react-progressbar';
 import './css/AddPostForm.css';
 
+const dropzoneOptions = {
+    multiple: false,
+    minSize: 30000,
+    maxSize: 5000000,
+    accept: 'image/*'
+};
+
 export default class AddPostForm extends Component {
   constructor() {
    super();
@@ -15,12 +22,6 @@ export default class AddPostForm extends Component {
         progress: "",
         dropZoneMsg: "",
         dropZoneErr: false
-     };
-     this.dropzoneOptions = {
-        multiple: false,
-        minSize: 30000,
-        maxSize: 5000000,
-        accept: 'image/*'
      };
   };
   onDrop = (accepted, rejected) => {
@@ -96,7 +97,7 @@ export default class AddPostForm extends Component {
           <div className={(this.state.dropZoneErr)?"drop__zone__error":""}>
             <p>{this.state.dropZoneMsg}</p>
           </div>
-          <Dropzone className="drop__zone" activeClassName="active__zone"  onDrop={this.onDrop.bind(this)} {...this.dropzoneOptions}>
+          <Dropzone className="drop__zone" activeClassName="active__zone"  onDrop={this.onDrop.bind(this)} {...dropzoneOptions}>
               <p className="drop__zone__paragraph">Drop image file here, or click to select image to upload.<br/>30kb &#60; jpg, gif, and png images &#60; 5mb </p>
               <img className="drop__zone__preview" src={this.state.preview} alt="preview"/>
           </Dropzone>
